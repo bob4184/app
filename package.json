@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "rebuild:ui": "cd ./back && @powershell Remove-Item -Recurse -Force dist && cd ../front && @powershell Remove-Item -Recurse -Force dist && npm run build && @powershell Copy-Item dist -Recurse ../back",
-    "create:ui": "cd ./front && npm run build && @powershell Copy-Item dist -Recurse ../back",
+    "create:ui": "cd ./frontend && npm run build && cp -r dist ../backend",
     "delete:ui": "cd ./front && @powershell Remove-Item -Recurse -Force dist && cd ../back && @powershell Remove-Item -Recurse -Force dist",
     "start": "cd ./back && npm start",
     "app:init": "cd ./back && npm install && cd ../front && npm install"

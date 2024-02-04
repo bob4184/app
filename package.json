@@ -8,7 +8,8 @@
     "rebuild:ui": "cd ./back && @powershell Remove-Item -Recurse -Force dist && cd ../front && @powershell Remove-Item -Recurse -Force dist && npm run build && @powershell Copy-Item dist -Recurse ../back",
     "create:ui": "cd ./front && npm run build && @powershell Copy-Item dist -Recurse ../back",
     "delete:ui": "cd ./front && @powershell Remove-Item -Recurse -Force dist && cd ../back && @powershell Remove-Item -Recurse -Force dist",
-    "start": "cd ./back && npm start"
+    "start": "cd ./back && npm start",
+    "app:init": "cd ./back && npm install && cd ../front && npm install"
   },
   "author": "",
   "license": "ISC"

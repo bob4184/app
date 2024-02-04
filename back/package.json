@@ -7,10 +7,7 @@
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js",
-    "rebuild:ui": "@powershell Remove-Item -Recurse -Force dist && cd .. && @powershell Remove-Item -Recurse -Force dist && npm run build && @powershell Copy-Item dist -Recurse ./back",
-    "create:ui": "cd .. && npm run build && @powershell Copy-Item dist -Recurse ./back",
-    "delete:ui": "@powershell Remove-Item -Recurse -Force dist && cd .. && @powershell Remove-Item -Recurse -Force dist"
+    "dev": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
